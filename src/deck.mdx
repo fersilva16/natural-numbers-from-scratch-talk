@@ -1,0 +1,320 @@
+import { Head, Image, Appear } from 'mdx-deck';
+
+import Code from './components/Code';
+import Cover from './components/Cover';
+import Intro from './components/Intro';
+import Website from './components/Website';
+import Thanks from './components/Thanks';
+
+export { default as theme } from './theme';
+export * as components from './components';
+
+<Head>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;700&display=swap"
+    rel="stylesheet"
+  />
+  <link href="https://fonts.cdnfonts.com/css/cascadia-code" rel="stylesheet" />
+  <title>Natural numbers from scratch</title>
+</Head>
+
+<Cover
+  title="Natural numbers from scratch"
+  subtitle="Introduction to Peano numbers in Lean 4"
+/>
+
+---
+
+<Intro />
+
+---
+
+# Overview
+
+<ul>
+  <li>What are natural numbers</li>
+  <li>What are peano numbers</li>
+  <li>What is Lean 4</li>
+  <li>Defining natural numbers in Lean 4</li>
+  <li>Operations</li>
+  <li>Comparations</li>
+  <li>Notations</li>
+  <li>Theorems</li>
+</ul>
+
+---
+
+# What are natural numbers
+
+<ul>
+  <Appear>
+    <li>Set of numbers</li>
+    <li>Used to count: 0, 1, 2, 3...</li>
+    <li>Any non-negative integer</li>
+    <li>Represented by the double-struck capital N symbol (ℕ)</li>
+  </Appear>
+</ul>
+
+---
+
+# What are Peano numbers
+
+<ul>
+  <Appear>
+    <li>Simple way to represent natural numbers</li>
+    <li>Zero value and successor function</li>
+    <li>Presented by Giuseppe Peano in the 19th century</li>
+  </Appear>
+</ul>
+
+---
+
+# What is Lean 4
+
+<ul>
+  <Appear>
+    <li>Functional programming language</li>
+    <li>Theorem prover</li>
+  </Appear>
+</ul>
+
+---
+
+<Code
+  title="Defining natural numbers in Lean 4"
+  code={require('!raw-loader!./code/N.lean')}
+  showNumbers={false}
+  dark={true}
+  lang="lean"
+/>
+
+---
+
+<Code
+  title="Pretty printing ℕ"
+  code={require('!raw-loader!./code/PrettyPrint.lean')}
+  showNumbers={false}
+  dark={true}
+  lang="lean"
+  steps={[
+    { range: [4, 4], notes: 'Deriving Repr' },
+    { range: [6, 11], notes: 'ℕ from default nat' },
+    { range: [13, 19], notes: 'ℕ to default nat' },
+    { range: [20, 22], notes: 'Examples' },
+  ]}
+/>
+
+---
+
+# Operations
+
+<ul>
+  <li>ℕ.add</li>
+  <li>ℕ.sub</li>
+  <li>ℕ.mult</li>
+  <li>ℕ.div</li>
+</ul>
+
+---
+
+<Code
+  title="ℕ.add"
+  code={require('!raw-loader!./code/Add.lean')}
+  showNumbers={false}
+  dark={true}
+  lang="lean"
+  steps={[
+    { range: [1, 3], notes: 'Implementation' },
+    { range: [5, 6], notes: 'Examples' },
+  ]}
+/>
+
+---
+
+<Code
+  title="ℕ.sub"
+  code={require('!raw-loader!./code/Sub.lean')}
+  showNumbers={false}
+  dark={true}
+  lang="lean"
+  steps={[
+    { range: [1, 3], notes: 'Implementation' },
+    { range: [5, 6], notes: 'Examples' },
+  ]}
+/>
+
+---
+
+<Code
+  title="ℕ.mult"
+  code={require('!raw-loader!./code/Mult.lean')}
+  showNumbers={false}
+  dark={true}
+  lang="lean"
+  steps={[
+    { range: [1, 3], notes: 'Implementation' },
+    { range: [5, 6], notes: 'Examples' },
+  ]}
+/>
+
+---
+
+<Code
+  title="ℕ.div"
+  code={require('!raw-loader!./code/div.lean')}
+  showNumbers={false}
+  dark={true}
+  lang="lean"
+  steps={[
+    { range: [1, 8], notes: 'Implementation' },
+    { range: [10, 11], notes: 'Examples' },
+  ]}
+/>
+
+---
+
+# Comparations
+
+<ul>
+  <li>ℕ.eq</li>
+  <li>ℕ.gt</li>
+  <li>ℕ.lt</li>
+  <li>ℕ.gte</li>
+  <li>ℕ.lte</li>
+</ul>
+
+---
+
+<Code
+  title="ℕ.eq"
+  code={require('!raw-loader!./code/Eq.lean')}
+  showNumbers={false}
+  dark={true}
+  lang="lean"
+  steps={[
+    { range: [1, 4], notes: 'Implementation' },
+    { range: [6, 7], notes: 'Examples' },
+  ]}
+/>
+
+---
+
+<Code
+  title="ℕ.gt"
+  code={require('!raw-loader!./code/Gt.lean')}
+  showNumbers={false}
+  dark={true}
+  lang="lean"
+  steps={[
+    { range: [1, 4], notes: 'Implementation' },
+    { range: [6, 7], notes: 'Examples' },
+  ]}
+/>
+
+---
+
+<Code
+  title="ℕ.lt"
+  code={require('!raw-loader!./code/Lt.lean')}
+  showNumbers={false}
+  dark={true}
+  lang="lean"
+  steps={[
+    { range: [1, 4], notes: 'Implementation' },
+    { range: [6, 7], notes: 'Examples' },
+  ]}
+/>
+
+---
+
+<Code
+  title="ℕ.gte"
+  code={require('!raw-loader!./code/Gte.lean')}
+  showNumbers={false}
+  dark={true}
+  lang="lean"
+  steps={[
+    { range: [1, 1], notes: 'Implementation' },
+    { range: [3, 4], notes: 'Examples' },
+  ]}
+/>
+
+---
+
+<Code
+  title="ℕ.lte"
+  code={require('!raw-loader!./code/Lte.lean')}
+  showNumbers={false}
+  dark={true}
+  lang="lean"
+  steps={[
+    { range: [1, 1], notes: 'Implementation' },
+    { range: [3, 4], notes: 'Examples' },
+  ]}
+/>
+
+---
+
+<Code
+  title="Notations"
+  code={require('!raw-loader!./code/Notations.lean')}
+  showNumbers={false}
+  dark={true}
+  lang="lean"
+  steps={[
+    { range: [1, 9], notes: 'Implementation' },
+    { range: [10, 22], notes: 'Examples' },
+  ]}
+/>
+
+---
+
+# Theorems
+
+<ul>
+  <li>ℕ.add_comm</li>
+  <li>ℕ.mult_assoc</li>
+</ul>
+
+---
+
+<Code
+  title="ℕ.add_comm"
+  code={require('!raw-loader!./code/AddComm.lean')}
+  showNumbers={false}
+  dark={true}
+  lang="lean"
+/>
+
+---
+
+<Code
+  title="ℕ.mult_assoc"
+  code={require('!raw-loader!./code/MultAssoc.lean')}
+  showNumbers={false}
+  dark={true}
+  lang="lean"
+/>
+
+---
+
+# References
+
+- [Natural number](https://en.wikipedia.org/wiki/Natural_number)
+- [Peano numbers](https://wiki.haskell.org/Peano_numbers)
+- [Peano axioms](https://en.wikipedia.org/wiki/Peano_axioms)
+- [Lean 4 documentation](https://leanprover.github.io/lean4/doc/whatIsLean.html)
+- [Theorem proving in Lean 4](https://leanprover.github.io/theorem_proving_in_lean4/title_page.html)
+- [Lean 4 notations documentation](https://leanprover.github.io/lean4/doc/notation.html)
+- [Lean 4 source notations efinition](https://github.com/leanprover/lean4/blob/master/src/Init/Notation.lean)
+- [Lean 4 nat implementation](https://github.com/leanprover/lean4/blob/a5ab59a413df6b2fca2c6909aea878d19c3ad8af/src/Init/Data/Nat/Basic.lean#L131)
+
+---
+
+<Website />
+
+---
+
+<Thanks />

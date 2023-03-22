@@ -40,7 +40,7 @@ const Title = styled.h2`
 const Intro = () => {
   return (
     <Background background="#03d69d" color="#ffffff">
-      <Img src="/img/profile-photo.png" />
+      <Img src="./img/profile-photo.png" />
       <h1>Fernando Silva</h1>
       <Socials>
         <Social href="https://twitter.com/fersilvaa16" target="_blank">

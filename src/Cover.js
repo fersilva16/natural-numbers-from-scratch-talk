@@ -26,7 +26,7 @@ const Name = styled.h3`
 const Cover = ({ title, subtitle }) => {
   return (
     <Background background="#ffffff" color="#000000">
-      <Img src="/img/n.svg" />
+      <Img src="./img/n.svg" />
       <Title>{title}</Title>
       {subtitle && <Subtitle>{subtitle}</Subtitle>}
       <Name>Fernando Silva</Name>

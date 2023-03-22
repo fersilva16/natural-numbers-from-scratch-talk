@@ -14,7 +14,7 @@ const Thanks = () => {
     <Background background="#03d69d" color="#ffffff">
       <h1>Thanks</h1>
       <h2>We are hiring!</h2>
-      <Img src="/img/hiring-qrcode.png" />
+      <Img src="./img/hiring-qrcode.png" />
       <Link href="https://woovi.com/jobs" target="_blank" color="inherit">
         <h2>woovi.com/jobs</h2>
       </Link>
